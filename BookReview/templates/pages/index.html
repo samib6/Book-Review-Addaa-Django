@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#clickme").click(function(){
+      $(".slider").slideUp("slow");
+    });
+  });
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <style media="screen">
+    html,body{
+      margin:0;
+      padding:0;
+      height:100%;
+      width:100%;
+      text-align:center;
+    }
+    .slider{
+      background-color:#17E9E0;
+      overflow-y:hidden;
+      height:100%;
+    }
+    #clickme a{
+      text-decoration:none;
+    }
+    h3,h2{
+      color:#A64AC9;
+      font-weight:italics;
+      font-family:'Sofia',cursive;
+}
+    #clickme{
+      width:180px;
+      height:100px;
+      border-radius:35px;
+      background-color:#FCCD04;
+      color:#F5E6CC;
+      font-family: 'Amatic SC', cursive;
+      font-size:35px;
+      border:2px dashed white;
+    }
+  /*  .slider.closed{
+      max-height:0;
+
+      #87ceff - blue
+    } */
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="welcome">
+      <h1 style="font-size:90px;color:white">Welcome</h1>
+      <h1 style="font-family: 'Butterfly Kids', cursive;
+font-weight:bold;font-size:125px;color:#FFB48F;">Kitaab Review Adaa</h1>
+    </div>
+    <div class="indextext">
+      <h2>Just finished Reading a book ??</h2>
+    </div>
+
+    <button type="button" id="clickme"><a href="{% url 'create' %}">Give Review!</a></button>
+  </div>
+</body>
+</html>
