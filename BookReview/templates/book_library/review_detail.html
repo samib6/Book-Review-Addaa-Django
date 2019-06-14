@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="reviewlist">
+ <h1>Recent Reviews</h1>
+ <ul>
+   <h3>{{ object.title }}
+ </ul>
+
+ {% if messages %}
+  <div class="messages">
+    <ul>
+      {% for message in messages %}
+    <li class="{{ message.tag }}">
+      {{ message }}
+    </li>
+
+      {% endfor %}
+    </ul>
+  </div>
+ {% endif %}
+
+<h2>Actions</h2>
+<ul>
+  <li>
+    <a href="{% url 'review_delete' object.id %}" style="background-color:#A64AC9;color:#FCCD04;border-radius:10px;padding:12px;margin:10px;line-height:2;">Delete this Review</a>
+  </li>
+  <li>
+    <a href="{% url 'bookreview_list' %}" style="background-color:#A64AC9;color:#FCCD04;border-radius:10px;padding:12px;margin:10px;line-height:2;">View All</a>
+  </li>
+</ul>
+
+</div>
+<div class="reviewcontent">
+<label style="color:#A64AC9;text-align:center;">{{ object.title }}</label>
+
+  <div>
+    <label>ID</label>
+    <span>{{ object.id}}</span>
+  </div>
+  <div class="">
+    <label>Author:</label>
+    <span>{{ object.author }}</span>
+  </div>
+
+  <div class="">
+    <label>Genre:</label>
+    <span>{{ object.genre }}</span>
+  </div>
+
+
+  <div class="">
+    <label>The date you started Reading:</label>
+    <span>{{ object.start_date }}</span>
+  </div>
+
+
+  <div class="">
+    <label>The date you finished reading</label>
+    <span>{{ object.end_date }}</span>
+  </div>
+
+
+  <div class="">
+    <label>Review of {{ object.title }}</label>
+    <span>{{ object.book_review }}</span>
+  </div>
+</div>
+{% endblock %}
