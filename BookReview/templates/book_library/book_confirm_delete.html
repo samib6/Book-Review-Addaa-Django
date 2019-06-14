@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%  block content %}
+<h1>Really Delete REview {{ object }}?</h1>
+<h2>This action cannot be undone</h2>
+<form  action="{% url 'review_delete' object.id %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Delete">
+
+</form>
+{% endblock %}
