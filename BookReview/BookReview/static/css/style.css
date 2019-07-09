@@ -1,0 +1,172 @@
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+  position:relative;
+}
+body{
+  background-color:white;
+  overflow-x:hidden;
+  max-height:100%;
+}
+.topbar{
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+  height:200px;
+  text-align:center;
+  background-color:#17E9E0;
+  color:white;
+  margin-bottom:30px;
+}
+.slider{
+  background-color:#17E9E0;
+  overflow-y:hidden;
+  height:100%;
+}
+#clickme a{
+  text-decoration:none;
+}
+h3,h2{
+  color:#A64AC9;
+  font-weight:italics;
+  font-family:'Sofia',cursive;
+}
+#clickme{
+  width:180px;
+  height:100px;
+  border-radius:35px;
+  background-color:#FCCD04;
+  color:#F5E6CC;
+  font-family: 'Amatic SC', cursive;
+  font-size:35px;
+  border:2px dashed white;
+}
+#nav {
+  position: relative;
+  width:100%;
+  overflow-x:hidden;
+  height:auto;
+  top:50px;
+  padding-bottom:25px;
+  border:5px solid blue;
+}
+#nav li{
+  list-style-type:none;
+  display:inline-block;
+  float:right;
+  margin-left:30px;
+  margin-right: 30px;
+  background-color:#FCCD04;
+}
+#nav li a{
+  text-decoration:none;
+  color:#A64AC9;
+  font-family: 'Amatic SC', cursive;
+  font-size:25px;
+  font-weight:bold;
+  padding:20px;
+}
+/* login page */
+.card-body
+{
+  margin-top:80px;
+  padding-top:100px;
+  background-color:yellow;
+  border:5px solid green;
+
+}
+.main{
+  margin-top:50px;
+  text-align:center;
+  background-color:#A64AC9;
+  width:100%;
+  padding-left:30%;
+  padding-right:30%;
+  border-radius:35px;
+  font-size:20px;
+  color:#FCCD04;
+  opacity:0.9;
+}
+.main input{
+  width:300px;
+  height:35px;
+  border:1px solid black;
+  border-radius:12px;
+}
+#submit{
+  background-color:#FCCD04;
+  padding:2px;
+  margin-left:-60%;
+  width:200px;
+  border-radius:30px;
+  height:30px;
+  font-size:17px;
+}
+.viewslider{
+  margin:45px;
+  position:absolute;
+  top:-30px;
+  left:200px;
+  width:200px;
+  height:30px;
+  background-color:#FCCD04;
+  border-radius:30px;
+}
+.viewslider a{
+  text-decoration:none;
+}
+.reviewlist{
+  position:relative;
+  top:0;
+  left:0;
+  background-color:#FCCD04;
+  color:#FCCD04;
+  width:310px;
+  height:auto;
+  display:inline-block;
+  vertical-align:top;
+}
+.reviewlist h1,h3{
+  color:#A64AC9;
+  font-weight:italics;
+  font-family:'Sofia',cursive;
+}
+.reviewlist a{
+  text-decoration:none;
+  font-size:22px;
+}
+.reviewcontent{
+  vertical-align:top;
+  display:inline-block;
+  position:relative;
+  right:0;
+  top:0;
+  width:1200px;
+  height:auto;
+  max-height:1200px;
+
+  background-color:#17E9E0;
+  padding-left:1px;
+}
+.reviewcontent label{
+  font-size:45px;
+  color:#F5E6CC;
+  font-family: 'Amatic SC', cursive;
+  font-weight:bold;
+  display:block;
+  clear:both;
+  margin:10px;
+}
+.reviewcontent span{
+  width:400px;
+  text-align:center;
+  padding:12px;
+  height:60px;
+  line-height:2;
+  marging:15px;
+  background-color:#FFB48F;
+  font-size:23px;
+}
