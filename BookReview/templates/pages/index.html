@@ -1,3 +1,4 @@
+{% load static  %}
 <!DOCTYPE HTML>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -8,40 +9,14 @@
     });
   });
   </script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   <style media="screen">
-    html,body{
-      margin:0;
-      padding:0;
-      height:100%;
-      width:100%;
-      text-align:center;
-    }
-    .slider{
-      background-color:#17E9E0;
-      overflow-y:hidden;
-      height:100%;
-    }
-    #clickme a{
-      text-decoration:none;
-    }
-    h3,h2{
-      color:#A64AC9;
-      font-weight:italics;
-      font-family:'Sofia',cursive;
-}
-    #clickme{
-      width:180px;
-      height:100px;
-      border-radius:35px;
-      background-color:#FCCD04;
-      color:#F5E6CC;
-      font-family: 'Amatic SC', cursive;
-      font-size:35px;
-      border:2px dashed white;
-    }
+  html,body{
+    text-align:center;
+  }
   /*  .slider.closed{
       max-height:0;
 
@@ -51,6 +26,7 @@
 </head>
 <body>
   <div class="slider">
+  {% include 'partials/_navbar.html' %}
     <div class="welcome">
       <h1 style="font-size:90px;color:white">Welcome</h1>
       <h1 style="font-family: 'Butterfly Kids', cursive;
