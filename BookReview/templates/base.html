@@ -1,140 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
+
     <meta charset="utf-8">
     <title>Kitaab Review</title>
-  </head>
-    <script>
-      $(document).ready(function()
-      {
-        $(".reviewlist li a").click(function()
+
+      <script>
+        $(document).ready(function()
         {
-          var url = $(this).attr("href");
-          $(".reviewcontent").load(url);
+          $(".reviewlist li a").click(function()
+          {
+            var url = $(this).attr("href");
+            $(".reviewcontent").load(url);
+          });
         });
-      });
 
-    </script>
-  <style media="screen">
-    html,body{
-      margin:0;
-      padding:0;
-      height:100%:
-      width:100%;
-      position:relative;
-    }
-    body{
-      background-color:white;
-      overflow-x:hidden;
-    }
-    .topbar{
-      position:absolute;
-      width:100%;
-      top:0;
-      left:0;
-      height:200px;
-      text-align:center;
-      background-color:#17E9E0;
-      color:white;
-      margin-bottom:30px;
-    }
-    .main{
-      margin-top:50px;
-      text-align:center;
-      background-color:#A64AC9;
-      width:100%;
-      padding-left:30%;
-      padding-right:30%;
-      border-radius:35px;
-      font-size:20px;
-      color:#FCCD04;
-      opacity:0.9;
-    }
-    .main input{
-      width:300px;
-      height:35px;
-      border:1px solid black;
-      border-radius:12px;
-    }
-    #submit{
-      background-color:#FCCD04;
-      padding:2px;
-      margin-left:-60%;
-      width:200px;
-      border-radius:30px;
-      height:30px;
-      font-size:17px;
-    }
-    .viewslider{
-      margin:45px;
-      position:absolute;
-      top:-30px;
-      left:200px;
-      width:200px;
-      height:30px;
-      background-color:#FCCD04;
-      border-radius:30px;
-    }
-    .viewslider a{
-      text-decoration:none;
-    }
-    .reviewlist{
-      position:aboslute;
-      top:0;
-      left:0;
-      background-color:#FCCD04;
-      color:#FCCD04;
-      width:310px;
-      height:auto;
-      display:inline-block;
-      vertical-align:top;
-    }
-    .reviewlist h1,h3{
-      color:#A64AC9;
-      font-weight:italics;
-      font-family:'Sofia',cursive;
-    }
-    .reviewlist a{
-      text-decoration:none;
-      font-size:22px;
-    }
-    .reviewcontent{
-      vertical-align:top;
-      display:inline-block;
-      left:300px;
-      width:1200px;
-      height:auto;
-      max-height:1200px;
-
-      background-color:#17E9E0;
-      padding-left:1px;
-    }
-    .reviewcontent label{
-      font-size:45px;
-      color:#F5E6CC;
-      font-family: 'Amatic SC', cursive;
-      font-weight:bold;
-      display:block;
-      clear:both;
-      margin:10px;
-    }
-    .reviewcontent span{
-      width:400px;
-      text-align:center;
-      padding:12px;
-      height:60px;
-      line-height:2;
-      marging:15px;
-      background-color:#FFB48F;
-      font-size:23px;
-    }
-  </style>
+      </script>
+  </head>
   <body>
-  {% block content %} {% endblock %}
+   {% include 'partials/_navbar.html'  %}
+  {% block content %}
+   {% endblock %}
   </body>
 </html>
